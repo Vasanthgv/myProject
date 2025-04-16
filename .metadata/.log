@@ -1377,3 +1377,12 @@ Contains: Missing org.springframework.cloud:spring-cloud-starter-gateway:jar:sou
 
 !ENTRY org.springframework.tooling.boot.ls 1 0 2025-04-16 16:08:00.085
 !MESSAGE Classpath changed for project: OrderService
+
+!ENTRY org.eclipse.lsp4e 2 0 2025-04-16 16:46:58.029
+!MESSAGE LS Hover Html and JDT hover html were naively concatenated as LS hover HTML BODY tag wasn't found
+
+!ENTRY org.eclipse.lsp4e 2 0 2025-04-16 16:47:23.504
+!MESSAGE LS Hover Html and JDT hover html were naively concatenated as LS hover HTML BODY tag wasn't found
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-04-16 16:55:49.314
+!MESSAGE Classpath changed for project: productService

@@ -3,8 +3,8 @@ spring:
     name: order-service
   datasource:
     url: jdbc:mysql://localhost:3306/dev_order_db
-    username: devuser
-    password: devpassword
+    username: root
+    password: root
 eureka:
   client:
     service-url:
