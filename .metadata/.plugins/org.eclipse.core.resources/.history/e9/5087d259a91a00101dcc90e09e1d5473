@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: product-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/prod_product_db
+    username: produser
+    password: prodpassword
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server-prod:8761/eureka/ # Replace with Eureka's production URL
+    fetch-registry: true
+    register-with-eureka: true
+ 
+		resilience4j:
+		  circuitbreaker:
+		    instances:
+		      productService:                     # Circuit Breaker instance name
+		        slidingWindowSize: 5              # Number of requests to observe
+		        failureRateThreshold: 50          # Failure rate percentage to open the Circuit Breaker
+		        waitDurationInOpenState: 10s      # Time to wait before transitioning to Half-Open state
+		        permittedNumberOfCallsInHalfOpenState: 3
+		        minimumNumberOfCalls: 3

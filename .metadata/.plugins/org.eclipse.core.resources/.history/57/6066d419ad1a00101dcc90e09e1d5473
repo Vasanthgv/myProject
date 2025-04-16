@@ -1,0 +1,5 @@
+package com.ProductService;
+
+public @interface EnableEurekaClient {
+
+}

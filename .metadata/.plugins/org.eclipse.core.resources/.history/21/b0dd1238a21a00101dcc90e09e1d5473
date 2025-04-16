@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: order-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/prod_order_db
+    username: produser
+    password: prodpassword
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server-prod:8761/eureka/ # Replace with Eureka's production URL
+    fetch-registry: true
+    register-with-eureka: true

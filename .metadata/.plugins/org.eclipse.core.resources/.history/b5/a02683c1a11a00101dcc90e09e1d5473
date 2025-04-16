@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/dev_order_db
+    username: devuser
+    password: devpassword

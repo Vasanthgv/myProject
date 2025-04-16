@@ -1,0 +1,20 @@
+spring:
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 10
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+		resilience4j:
+		  circuitbreaker:
+		    instances:
+		      productService:
+		        slidingWindowSize: 5
+		        failureRateThreshold: 50
+		        waitDurationInOpenState: 10s
+		        permittedNumberOfCallsInHalfOpenState: 3
+		        minimumNumberOfCalls: 3

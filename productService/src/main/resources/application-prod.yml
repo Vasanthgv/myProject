@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: product-service
+  profiles:
+    active: dev # Specify the active profile (dev or prod)
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      productService:                     # Circuit Breaker instance name
+        slidingWindowSize: 5              # Number of requests to observe
+        failureRateThreshold: 50          # Failure rate percentage to open the Circuit Breaker
+        waitDurationInOpenState: 10s      # Time to wait before transitioning to Half-Open state
+        permittedNumberOfCallsInHalfOpenState: 3
+        minimumNumberOfCalls: 3
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
